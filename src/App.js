@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Home from './Component/Home'
+import Students from './Component/Students'
+import Contact from './Component/Contact' 
+import {Route, Routes , Link} from "react-router-dom"
 
-function App() {
+export default function handson4() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='back'>
+    <div className='nav-bar'>
+      <div className='links'>
+      <Link className='link' to='/home'>Home</Link>
+      <Link className='link' to='/students'>Students</Link>
+      <Link className='link' to='contact us'>Contact Us</Link>
+      </div>
     </div>
-  );
+    
+    <Routes>
+    <Route path='/home' element={<Home/>} />
+    <Route path='/students' element={<Students/>} />
+    <Route path='/contact us' element={<Contact/>} />
+    </Routes>
+    
+    </div>
+  )
 }
-
-export default App;
