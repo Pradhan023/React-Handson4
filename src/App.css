@@ -42,7 +42,14 @@ table
   font-size: x-large;
   transform: translate(22%,5%);
 }
-
+.edit
+{
+  text-decoration: none;
+  color: black;
+}
+.edit:active{
+  color: blue;
+}
 .head{
 display: flex;
 justify-content: space-between;
