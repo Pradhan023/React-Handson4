@@ -42,10 +42,6 @@ table
   font-size: x-large;
   transform: translate(22%,5%);
 }
-.edit
-{
-  color: black;
-}
 .edit:active{
   color: blue;
 }
